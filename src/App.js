@@ -15,8 +15,8 @@ class App extends Component {
     handleChange = ({target: { value, name }}) => this.setState({ [name]: value })
 
     createAndDownloadPdf = () => {
-        axios.post('http://test-pdf-generator.herokuapp.com/create-pdf', this.state)
-            .then(() => axios.get('http://test-pdf-generator.herokuapp.com/fetch-pdf', { responseType: 'blob' }))
+        axios.post('https://test-pdf-generator.herokuapp.com/create-pdf', this.state)
+            .then(() => axios.get('https://test-pdf-generator.herokuapp.com/fetch-pdf', { responseType: 'blob' }))
             .then((res) => {
                 const pdfBlob = new Blob([res.data], { type: 'application/pdf'})
                 saveAs(pdfBlob, 'newPdf.pdf');
