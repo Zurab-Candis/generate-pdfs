@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://Zurab-Candis.github.io/generate-pdfs",
+  "proxy": "http://localhost:5000/",
   "homepage": "https://Zurab-Candis.github.io/generate-pdfs",
   "dependencies": {
     "axios": "^0.18.0",
