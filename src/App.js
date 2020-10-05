@@ -11,6 +11,7 @@ class App extends Component {
         receiptId: 0,
         price1: 0,
         price2: 0,
+        price3: 0,
     }
     handleChange = ({target: { value, name }}) => this.setState({ [name]: value })
 
@@ -26,11 +27,10 @@ class App extends Component {
     render() {
       return (
         <div className="App">
-         <input type='text' placeholder='Name' name='name' onChange={this.handleChange} />
-         <input type='text' placeholder='Receipt ID' name='receiptId' onChange={this.handleChange} />
-         <input type='text' placeholder='Price 1' name='price1' onChange={this.handleChange} />
-         <input type='text' placeholder='Price 2' name='price2' onChange={this.handleChange} />
-         <button onClick={this.createAndDownloadPdf}>Download PDF</button>
+         <input className="Invoice-Field" type='text' placeholder='Name' name='name' onChange={this.handleChange} />
+         <input className="Invoice-Field" type='text' placeholder='Receipt ID' name='receiptId' onChange={this.handleChange} />
+         <input className="Invoice-Field" type='number' placeholder='Price' name='price1' onChange={this.handleChange} />
+         <button className="Download-Button" onClick={this.createAndDownloadPdf}>Download Invoice</button>
         </div>
       );
      }
